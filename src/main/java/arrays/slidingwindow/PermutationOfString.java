@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 public class PermutationOfString {
     public boolean permutationofString(String s1,String s2){
+        if (s1.length() > s2.length()) {
+            return false;
+        }
         int [] need=new int[26];
         int [] window= new int[26];
         for(int i=0;i<s1.length();i++){
