@@ -1,5 +1,7 @@
 package arrays.prefixsum.differencearray;
 
+import java.util.HashMap;
+
 public class Coperateflightbooking1109 {
     public int[] flight(int[][] flight,int n){
         int [] arr=new int[n];
@@ -18,5 +20,6 @@ public class Coperateflightbooking1109 {
             arr[i]=sum;
         }
         return arr;
+        
     }
 }
