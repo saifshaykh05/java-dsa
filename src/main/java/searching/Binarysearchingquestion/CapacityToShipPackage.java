@@ -1,7 +1,7 @@
 package searching.Binarysearchingquestion;
 
 public class CapacityToShipPackage {
-    public int ship(int [] arr, int days){
+    public int shipWithinDays(int[] arr, int days) {
         int left=0;
         int right=0;
         for(int weight:arr){
@@ -20,19 +20,22 @@ public class CapacityToShipPackage {
         }
         return left;
     }
-    private int calculateDays(int[] arr,int capacity){
-        int day=1;
-        int currweight=0;
-        for(int weight:arr){
-            if(currweight+weight<=capacity){
-                currweight+=weight;
-            }
-            else{
-                day++;
-                currweight=weight;
+    private int calculateDays(int[] weights, int capacity) {
+
+        int days = 1;
+        int currentWeight = 0;
+
+        for (int weight : weights) {
+
+            if (currentWeight + weight <= capacity) {
+                currentWeight += weight;
+            } else {
+                days++;
+                currentWeight = weight;
             }
         }
-        return day;
+
+        return days;
     }
 
 }
